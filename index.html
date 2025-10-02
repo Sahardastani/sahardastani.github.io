@@ -61,15 +61,7 @@
     header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(180%) blur(6px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom: 1px solid var(--border); }
     .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 24px; }
     .brand { display:flex; align-items:center; gap:12px; font-weight: 700; letter-spacing:.2px; }
-    /* .brand img { width: 28px; height: 28px; border-radius: 8px; } */
-    .brand img {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;   /* ← makes it round */
-      object-fit: cover;    /* ← crops to a perfect circle if the source isn't square */
-      aspect-ratio: 1 / 1;  /* ← keeps it square in modern browsers */
-    }
-
+    .brand img { width: 28px; height: 28px; border-radius: 8px; }
     .nav ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
     .nav a { text-decoration: none; color: var(--text); opacity: .9; }
     .nav a:hover { color: var(--link); }
@@ -90,7 +82,17 @@
     .hero .title { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin: 0 0 10px; }
     .hero p { margin: 8px 0; color: var(--muted); }
     .avatar { justify-self: center; }
-    .avatar img { width: 220px; height: 220px; object-fit: cover; border-radius: 22px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+    /* .avatar img { width: 220px; height: 220px; object-fit: cover; border-radius: 22px; box-shadow: var(--shadow); border: 1px solid var(--border); } */
+    .avatar img {
+      width: 220px;
+      height: 220px;
+      aspect-ratio: 1 / 1;   /* keeps it square */
+      object-fit: cover;     /* crops to fill the circle */
+      border-radius: 50%;    /* makes it round */
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
     .links { display:flex; flex-wrap: wrap; gap:12px; margin-top: 14px; }
     .chip { border: 1px solid var(--border); padding: 8px 12px; border-radius: 999px; text-decoration: none; color: var(--text); font-size: 14px; }
     .chip:hover { border-color: var(--link); color: var(--link); }
