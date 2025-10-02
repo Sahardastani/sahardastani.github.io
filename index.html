@@ -231,316 +231,290 @@
 
 
         <!-- Papers -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"  cellspacing="0" cellpadding="10"><tbody>
-          <a name="papers"></a>
-          <tr>
-            <td style="padding:10px;width:100%;vertical-align:middle">
-              <heading>Papers</heading>
-            </td>
-          </tr>
-        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tbody>
+            <tr>
+              <td style="padding:10px;width:100%;vertical-align:middle">
+                <h2>Papers</h2>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
+        <!-- JS for expanding author list -->
+        <script>
+          function showMoreAuthors(id) {
+            document.getElementById('more-authors-' + id).style.display = 'inline';
+            document.getElementById('show-link-' + id).style.display = 'none';
+          }
+        </script>
+
+        <!-- ########################## -->
+        <!-- TRUST -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
           <tr>
-            <td width="50%" valign="center" align="center">
+            <td width="50%" valign="middle" align="center">
               <a href="https://arxiv.org/pdf/2509.22813"><img src="images/trust.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
             </td>
             <td width="67%" valign="top">
               <p>
-                <a href="https://arxiv.org/pdf/2509.22813" id="byolac"><heading>TRUST: Test-Time Refinement using Uncertainty-Guided SSM Traverses</heading></a>
-                <br>
-                <span class="author"><u><strong>Sahar Dastani</strong></u>, A. Bahri, G. A. Vargas Hakim, 
-                <span id="more-authors" style="display:none;">
-                  M. Yazdanpanah, M. Noori, D. Osowiechi, S. Barbeau, I. Ben Ayed, H. Lombaert, C. Desrosiers.
-                </span>
-                <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-                </span>
-                <br>NeurIPS 2025.
+                <a href="https://arxiv.org/pdf/2509.22813"><strong>TRUST: Test-Time Refinement using Uncertainty-Guided SSM Traverses</strong></a><br>
+                <span class="author">
+                  <u><strong>Sahar Dastani</strong></u>, A. Bahri, G. A. Vargas Hakim,
+                  <span id="more-authors-1" style="display:none;">M. Yazdanpanah, M. Noori, D. Osowiechi, S. Barbeau, I. Ben Ayed, H. Lombaert, C. Desrosiers.</span>
+                  <a href="javascript:void(0);" id="show-link-1" onclick="showMoreAuthors(1)">more authors</a>
+                </span><br>NeurIPS 2025.
               </p>
-
-              <div class="paper" id="">
+              <div class="paper">
                 <a href="https://arxiv.org/pdf/2509.22813">paper</a> |
                 <a href="https://github.com/Sahardastani/trust">code</a>
               </div>
             </td>
           </tr>
         </table>
+
         <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
+        <!-- Vision-Language Models -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
           <tr>
-            <td width="50%" valign="center" align="center"><a href="https://arxiv.org/pdf/2505.21844"><img src="images/vocab.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://arxiv.org/pdf/2505.21844"><img src="images/vocab.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
             </td>
             <td width="67%" valign="top">
-              <p><a href="https://arxiv.org/pdf/2505.21844" id="byolac">
-              <heading>Test-Time Adaptation of Vision-Language Models for Open-Vocabulary Semantic Segmentation</heading></a>
-              <br>
-              <!-- <br>D. Osowiechi, M. Noori, G. A. Vargas Hakim, A. Bahri, M. Yazdanpanah, <u><strong>Sahar Dastani</strong></u>, F. Beizaee, I. Ben Ayed, C. Desrosiers<br> -->
-              <span class="author">D. Osowiechi, M. Noori, G. A. Vargas Hakim, A. Bahri, M. Yazdanpanah, <u><strong>Sahar Dastani</strong></u>, 
-              <span id="more-authors" style="display:none;">
-                F. Beizaee, I. Ben Ayed, C. Desrosiers.
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>NeurIPS 2025.
+              <p>
+                <a href="https://arxiv.org/pdf/2505.21844"><strong>Test-Time Adaptation of Vision-Language Models for Open-Vocabulary Semantic Segmentation</strong></a><br>
+                <span class="author">
+                  D. Osowiechi, M. Noori, G. A. Vargas Hakim, A. Bahri, M. Yazdanpanah, <u><strong>Sahar Dastani</strong></u>,
+                  <span id="more-authors-2" style="display:none;">F. Beizaee, I. Ben Ayed, C. Desrosiers.</span>
+                  <a href="javascript:void(0);" id="show-link-2" onclick="showMoreAuthors(2)">more authors</a>
+                </span><br>NeurIPS 2025.
               </p>
-
-              <div class="paper" id="">
-              <a href="https://arxiv.org/pdf/2505.21844">paper</a> |
-              <a href="https://github.com/dosowiechi/MLMP">code</a>
-            </div>
-            </td>
-          </tr>
-        </table>
-        <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="50%" valign="center" align="center"><a href="https://arxiv.org/pdf/2507.02743"><img src="images/prompt.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://arxiv.org/pdf/2507.02743" id="byolac">
-              <heading>Prompt Learning With Bounding Box Constraints for Medical Image Segmentation</heading></a>
-              <br>
-              <!-- <br>M. Gaillochet, M. Noori, <u><strong>Sahar Dastani</strong></u>, C. Desrosiers, H. Lombaert.<br> -->
-              <span class="author">M. Gaillochet, M. Noori, <u><strong>Sahar Dastani</strong></u>,
-              <span id="more-authors" style="display:none;">
-                C. Desrosiers, H. Lombaert.
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>IEEE Transactions on Biomedical Engineering 2025.
-              </p>
-
-              <div class="paper" id="">
-              <a href="https://arxiv.org/pdf/2507.02743">paper</a> |
-              <a href="https://github.com/Minimel/box-prompt-learning-VFM">code</a>
-            </div>
-            </td>
-          </tr>
-        </table>
-        <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="50%" valign="center" align="center"><a href="https://arxiv.org/pdf/2505.19546"><img src="images/skeleton.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://arxiv.org/pdf/2505.19546" id="byolac">
-              <heading>SMART-PC: Skeletal Model Adaptation for Robust Test-Time Training in Point Clouds</heading></a>
-              <br>
-              <!-- <br>A. Bahri, M. Yazdanpanah, <u><strong>Sahar Dastani</strong></u>, M. Noori, G. A. Vargas Hakim, D. Osowiechi, F. Beizaee,
-              I. Ben Ayed, C. Desrosiers.<br> -->
-              <span class="author">A. Bahri, M. Yazdanpanah, <u><strong>Sahar Dastani</strong></u>,
-              <span id="more-authors" style="display:none;">
-                M. Noori, G. A. Vargas Hakim, D. Osowiechi, F. Beizaee, I. Ben Ayed, C. Desrosiers.
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>ICML 2025.
-              </p>
-
-              <div class="paper" id="">
-              <a href="https://arxiv.org/pdf/2505.19546">paper</a> |
-              <a href="https://github.com/AliBahri94/SMART-PC">code</a>
-            </div>
-            </td>
-          </tr>
-        </table>
-        <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="50%" valign="center" align="center"><a href="https://arxiv.org/pdf/2509.09785"><img src="images/purge.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://arxiv.org/pdf/2509.09785" id="byolac">
-              <heading>Purge-Gate: Efficient Backpropagation-Free Test-Time Adaptation for Point Clouds via Token purging</heading></a>
-              <br>
-              <!-- <br>M. Yazdanpanah, A. Bahri, M. Noori, <strong>S. Dastani</strong>, G. A. Vargas Hakim, D. Osowiechi, I. Ben Ayed, C. Desrosiers.<br> -->
-              <span class="author">M. Yazdanpanah, A. Bahri, M. Noori, <u><strong>Sahar Dastani</strong></u>,
-              <span id="more-authors" style="display:none;">
-                G. A. Vargas Hakim, D. Osowiechi, I. Ben Ayed, C. Desrosiers.
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>ICCV 2025.
-              </p>
-
-              <div class="paper" id="">
-              <a href="https://arxiv.org/pdf/2509.09785">paper</a> |
-              <a href="https://github.com/MosyMosy/Purge-Gate">code</a>
-            </div>
-            </td>
-          </tr>
-        </table>
-        <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="50%" valign="center" align="center"><a href="https://arxiv.org/pdf/2503.06369"><img src="images/spectral_vmamba.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://arxiv.org/pdf/2503.06369" id="byolac">
-              <heading>Spectral State Space Model for Rotation-Invariant Visual Representation Learning</heading></a>
-              <br>
-              <!-- <br><u><strong>Sahar Dastani</strong></u>, A. Bahri, M. Yazdanpanah, M. Noori,
-              Milad Cheraghalikhani, G. A. Vargas Hakim, D. Osowiechi, F. Beizaee, A. Mondal,
-              H. Lombaert, C. Desrosiers.<br> -->
-              <span class="author"><u><strong>Sahar Dastani</strong></u>, A. Bahri, M. Yazdanpanah,
-              <span id="more-authors" style="display:none;">
-                M. Noori, G. A. Vargas Hakim, D. Osowiechi, F. Beizaee, A. Mondal, H. Lombaert, C. Desrosiers.
-              </span>
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>CVPR 2025.
-              </p>
-
-              <div class="paper" id="">
-              <a href="https://arxiv.org/pdf/2503.06369">paper</a> |
-              <a href="https://github.com/Sahardastani/spectral_vmamba">code</a>
-            </div>
-            </td>
-          </tr>
-        </table>
-        <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="50%" valign="center" align="center"><a href="https://arxiv.org/pdf/2503.04953"><img src="images/mamba_pointcloud.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://arxiv.org/pdf/2503.04953" id="byolac">
-              <heading>Spectral Informed Mamba for Robust Point Cloud Processing</heading></a>
-              <br>
-              <!-- <br>A. Bahri, M. Yazdanpanah, M. Noori, <strong>S. Dastani</strong>, M. Cheraghalikhani, 
-              D. Osowiechi, G. A. Vargas Hakim, F. Beizaee, I. Ben Ayed, C. Desrosiers.<br> -->
-              <span class="author">A. Bahri, M. Yazdanpanah, M. Noori, <u><strong>Sahar Dastani</strong></u>,
-              <span id="more-authors" style="display:none;">
-                M. Cheraghalikhani, D. Osowiechi, G. A. Vargas Hakim, F. Beizaee, I. Ben Ayed, C. Desrosiers.
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>CVPR 2025.
-              </p>
-
-              <div class="paper" id="">
-              <a href="https://arxiv.org/pdf/2503.04953">paper</a> |
-              <a href="https://github.com/AliBahri94/SI-Mamba">code</a>
-            </div>
-            </td>
-          </tr>
-        </table>
-        <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="50%" valign="center" align="center"><a href="https://arxiv.org/pdf/2411.01116"><img src="images/sampling.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://arxiv.org/pdf/2411.01116" id="byolac">
-              <heading>Test-Time Adaptation in Point Clouds: Leveraging Sampling Variation with Weight Averaging</heading></a>
-              <br>
-              <!-- <br>A. Bahri, M. Yazdanpanah, M. Noori, <strong>S. Dastani</strong>,
-              M. Cheraghalikhani, D. Osowiechi, G. A. Vargas Hakim, F. Beizaee, I. Ben Ayed, C. Desrosiers.<br> -->
-              <span class="author">A. Bahri, M. Yazdanpanah, M. Noori, <u><strong>Sahar Dastani</strong></u>,
-              <span id="more-authors" style="display:none;">
-                M. Cheraghalikhani, D. Osowiechi, G. A. Vargas Hakim, F. Beizaee, I. Ben Ayed, C. Desrosiers.
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>WACV 2025. <font color=#FF8080><strong>(Oral)</strong></font>
-              </p>
-
-              <div class="paper" id="">
-              <a href="https://arxiv.org/pdf/2411.01116">paper</a> |
-              <a href="https://github.com/AliBahri94/SVWA_TTA">code</a>
-            </div>
-            </td>
-          </tr>
-        </table>
-        <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="50%" valign="center" align="center"><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/55d16334943f8728073e17139e5baa3d-Paper-Conference.pdf"><img src="images/watt.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/55d16334943f8728073e17139e5baa3d-Paper-Conference.pdf" id="byolac">
-              <heading>WATT: Weight Average Test Time Adaptation of CLIP</heading></a>
-              <br>
-              <!-- <br>D. Osowiechi, M. Noori, G. A. Vargas Hakim, M. Yazdanpanah, A. Bahri, 
-              M. Cheraghalikhani, <strong>S. Dastani</strong>, F. Beizaee, I. Ben Ayed, C. Desrosiers.<br> -->
-              <span class="author">D. Osowiechi, M. Noori, G. A. Vargas Hakim, M. Yazdanpanah, A. Bahri, 
-              M. Cheraghalikhani, <u><strong>Sahar Dastani</strong></u>,
-              <span id="more-authors" style="display:none;">
-                F. Beizaee, I. Ben Ayed, C. Desrosiers.
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>NeurIPS 2024.
-              </p>
-
-              <div class="paper" id="">
-              <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/55d16334943f8728073e17139e5baa3d-Paper-Conference.pdf">paper</a> |
-              <a href="https://github.com/Mehrdad-Noori/WATT">code</a>
-            </div>
-            </td>
-          </tr>
-        </table>
-        <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="50%" valign="center" align="center"><a href="https://journals.lww.com/pccmjournal/citation/2024/11001/pp259_topic_.245.aspx"><img src="images/psychomotor.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://journals.lww.com/pccmjournal/citation/2024/11001/pp259_topic_.245.aspx" id="byolac">
-              <heading>Psychomotor agitation detection using deep learning</heading></a>
-              <br>
-              <!-- <br><u><strong>Sahar Dastani</strong></u>, A. Harakeh, P. Jouvet, and S. Kahou<br> -->
-              <span class="author"><u><strong>Sahar Dastani</strong></u>, A. Harakeh, P. Jouvet,
-              <span id="more-authors" style="display:none;">
-                S. Kahou.
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>WFPICCS PCCM Journal 2024.
-              </p>
-
-              <div class="paper" id="">
-              <a href="https://journals.lww.com/pccmjournal/citation/2024/11001/pp259_topic_.245.aspx">paper</a>
-            </div>
-            </td>
-          </tr>
-        </table>
-        <!-- ########################## -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="50%" valign="center" align="center"><a href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_32"><img src="images/runet.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_32" id="byolac">
-              <heading>Relational UNet for Image Segmentation</heading></a>
-              <br>
-              <!-- <br>I. Sheth, P. Braga, S. Sujit, <u><strong>Sahar Dastani</strong></u>, S. Kahou<br> -->
-              <span class="author">I. Sheth, P. Braga, S. Sujit, <u><strong>Sahar Dastani</strong></u>,
-              <span id="more-authors" style="display:none;">
-                S. Kahou.
-              </span>
-              <a href="#" onclick="document.getElementById('more-authors').style.display='inline'; this.style.display='none'; return false;">more authors</a>
-              </span>
-              <br>MICCAI Workshop 2023.
-              </p>
-
-              <div class="paper" id="">
-              <a href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_32">paper</a> |
-              <a href="https://github.com/ivaxi0s/runet">code</a>
-
-            </div>
+              <div class="paper">
+                <a href="https://arxiv.org/pdf/2505.21844">paper</a> |
+                <a href="https://github.com/dosowiechi/MLMP">code</a>
+              </div>
             </td>
           </tr>
         </table>
 
+        <!-- ########################## -->
+        <!-- Prompt Learning -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://arxiv.org/pdf/2507.02743"><img src="images/prompt.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p>
+                <a href="https://arxiv.org/pdf/2507.02743"><strong>Prompt Learning With Bounding Box Constraints for Medical Image Segmentation</strong></a><br>
+                <span class="author">
+                  M. Gaillochet, M. Noori, <u><strong>Sahar Dastani</strong></u>,
+                  <span id="more-authors-3" style="display:none;">C. Desrosiers, H. Lombaert.</span>
+                  <a href="javascript:void(0);" id="show-link-3" onclick="showMoreAuthors(3)">more authors</a>
+                </span><br>IEEE Transactions on Biomedical Engineering 2025.
+              </p>
+              <div class="paper">
+                <a href="https://arxiv.org/pdf/2507.02743">paper</a> |
+                <a href="https://github.com/Minimel/box-prompt-learning-VFM">code</a>
+              </div>
+            </td>
+          </tr>
+        </table>
 
-        <br>
-        <br>
-        <br>
+        <!-- ########################## -->
+        <!-- SMART-PC -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://arxiv.org/pdf/2505.19546"><img src="images/skeleton.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p>
+                <a href="https://arxiv.org/pdf/2505.19546"><strong>SMART-PC: Skeletal Model Adaptation for Robust Test-Time Training in Point Clouds</strong></a><br>
+                <span class="author">
+                  A. Bahri, M. Yazdanpanah, <u><strong>Sahar Dastani</strong></u>,
+                  <span id="more-authors-4" style="display:none;">M. Noori, G. A. Vargas Hakim, D. Osowiechi, F. Beizaee, I. Ben Ayed, C. Desrosiers.</span>
+                  <a href="javascript:void(0);" id="show-link-4" onclick="showMoreAuthors(4)">more authors</a>
+                </span><br>ICML 2025.
+              </p>
+              <div class="paper">
+                <a href="https://arxiv.org/pdf/2505.19546">paper</a> |
+                <a href="https://github.com/AliBahri94/SMART-PC">code</a>
+              </div>
+            </td>
+          </tr>
+        </table>
 
+        <!-- ########################## -->
+        <!-- Purge-Gate -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://arxiv.org/pdf/2509.09785"><img src="images/purge.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p>
+                <a href="https://arxiv.org/pdf/2509.09785"><strong>Purge-Gate: Efficient Backpropagation-Free Test-Time Adaptation for Point Clouds via Token Purging</strong></a><br>
+                <span class="author">
+                  M. Yazdanpanah, A. Bahri, M. Noori, <u><strong>Sahar Dastani</strong></u>,
+                  <span id="more-authors-5" style="display:none;">G. A. Vargas Hakim, D. Osowiechi, I. Ben Ayed, C. Desrosiers.</span>
+                  <a href="javascript:void(0);" id="show-link-5" onclick="showMoreAuthors(5)">more authors</a>
+                </span><br>ICCV 2025.
+              </p>
+              <div class="paper">
+                <a href="https://arxiv.org/pdf/2509.09785">paper</a> |
+                <a href="https://github.com/MosyMosy/Purge-Gate">code</a>
+              </div>
+            </td>
+          </tr>
+        </table>
 
-        </tr>
+        <!-- ########################## -->
+        <!-- Spectral State Space -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://arxiv.org/pdf/2503.06369"><img src="images/spectral_vmamba.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p>
+                <a href="https://arxiv.org/pdf/2503.06369"><strong>Spectral State Space Model for Rotation-Invariant Visual Representation Learning</strong></a><br>
+                <span class="author">
+                  <u><strong>Sahar Dastani</strong></u>, A. Bahri, M. Yazdanpanah,
+                  <span id="more-authors-6" style="display:none;">M. Noori, G. A. Vargas Hakim, D. Osowiechi, F. Beizaee, A. Mondal, H. Lombaert, C. Desrosiers.</span>
+                  <a href="javascript:void(0);" id="show-link-6" onclick="showMoreAuthors(6)">more authors</a>
+                </span><br>CVPR 2025.
+              </p>
+              <div class="paper">
+                <a href="https://arxiv.org/pdf/2503.06369">paper</a> |
+                <a href="https://github.com/Sahardastani/spectral_vmamba">code</a>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <!-- ########################## -->
+        <!-- Spectral Informed Mamba -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://arxiv.org/pdf/2503.04953"><img src="images/mamba_pointcloud.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p>
+                <a href="https://arxiv.org/pdf/2503.04953"><strong>Spectral Informed Mamba for Robust Point Cloud Processing</strong></a><br>
+                <span class="author">
+                  A. Bahri, M. Yazdanpanah, M. Noori, <u><strong>Sahar Dastani</strong></u>,
+                  <span id="more-authors-7" style="display:none;">M. Cheraghalikhani, D. Osowiechi, G. A. Vargas Hakim, F. Beizaee, I. Ben Ayed, C. Desrosiers.</span>
+                  <a href="javascript:void(0);" id="show-link-7" onclick="showMoreAuthors(7)">more authors</a>
+                </span><br>CVPR 2025.
+              </p>
+              <div class="paper">
+                <a href="https://arxiv.org/pdf/2503.04953">paper</a> |
+                <a href="https://github.com/AliBahri94/SI-Mamba">code</a>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <!-- ########################## -->
+        <!-- SVWA TTA -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://arxiv.org/pdf/2411.01116"><img src="images/sampling.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p>
+                <a href="https://arxiv.org/pdf/2411.01116"><strong>Test-Time Adaptation in Point Clouds: Leveraging Sampling Variation with Weight Averaging</strong></a><br>
+                <span class="author">
+                  A. Bahri, M. Yazdanpanah, M. Noori, <u><strong>Sahar Dastani</strong></u>,
+                  <span id="more-authors-8" style="display:none;">M. Cheraghalikhani, D. Osowiechi, G. A. Vargas Hakim, F. Beizaee, I. Ben Ayed, C. Desrosiers.</span>
+                  <a href="javascript:void(0);" id="show-link-8" onclick="showMoreAuthors(8)">more authors</a>
+                </span><br>WACV 2025. <font color="#FF8080"><strong>(Oral)</strong></font>
+              </p>
+              <div class="paper">
+                <a href="https://arxiv.org/pdf/2411.01116">paper</a> |
+                <a href="https://github.com/AliBahri94/SVWA_TTA">code</a>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <!-- ########################## -->
+        <!-- WATT -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/55d16334943f8728073e17139e5baa3d-Paper-Conference.pdf"><img src="images/watt.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p>
+                <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/55d16334943f8728073e17139e5baa3d-Paper-Conference.pdf"><strong>WATT: Weight Average Test Time Adaptation of CLIP</strong></a><br>
+                <span class="author">
+                  D. Osowiechi, M. Noori, G. A. Vargas Hakim, M. Yazdanpanah, A. Bahri, M. Cheraghalikhani, <u><strong>Sahar Dastani</strong></u>,
+                  <span id="more-authors-9" style="display:none;">F. Beizaee, I. Ben Ayed, C. Desrosiers.</span>
+                  <a href="javascript:void(0);" id="show-link-9" onclick="showMoreAuthors(9)">more authors</a>
+                </span><br>NeurIPS 2024.
+              </p>
+              <div class="paper">
+                <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/55d16334943f8728073e17139e5baa3d-Paper-Conference.pdf">paper</a> |
+                <a href="https://github.com/Mehrdad-Noori/WATT">code</a>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <!-- ########################## -->
+        <!-- Psychomotor Agitation -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://journals.lww.com/pccmjournal/citation/2024/11001/pp259_topic_.245.aspx"><img src="images/psychomotor.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p>
+                <a href="https://journals.lww.com/pccmjournal/citation/2024/11001/pp259_topic_.245.aspx"><strong>Psychomotor agitation detection using deep learning</strong></a><br>
+                <span class="author">
+                  <u><strong>Sahar Dastani</strong></u>, A. Harakeh, P. Jouvet,
+                  <span id="more-authors-10" style="display:none;">S. Kahou.</span>
+                  <a href="javascript:void(0);" id="show-link-10" onclick="showMoreAuthors(10)">more authors</a>
+                </span><br>WFPICCS PCCM Journal 2024.
+              </p>
+              <div class="paper">
+                <a href="https://journals.lww.com/pccmjournal/citation/2024/11001/pp259_topic_.245.aspx">paper</a>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <!-- ########################## -->
+        <!-- Relational UNet -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="50%" valign="middle" align="center">
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_32">
+                <img src="images/runet.png" alt="sym" width="80%" height="150" style="border-radius:1px">
+              </a>
+            </td>
+            <td width="67%" valign="top">
+              <p>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_32">
+                  <strong>Relational UNet for Image Segmentation</strong>
+                </a><br>
+                <span class="author">
+                  I. Sheth, P. Braga, S. Sujit, <u><strong>Sahar Dastani</strong></u>,
+                  <span id="more-authors-11" style="display:none;">S. Kahou.</span>
+                  <a href="javascript:void(0);" id="show-link-11" onclick="showMoreAuthors(11)">more authors</a>
+                </span><br>MICCAI Workshop 2023.
+              </p>
+              <div class="paper">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_32">paper</a> |
+                <a href="https://github.com/ivaxi0s/runet">code</a>
+              </div>
+            </td>
+          </tr>
+        </table>
 
 
 
