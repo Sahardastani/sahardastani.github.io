@@ -87,20 +87,24 @@
       nav details ul { display: grid; gap: 10px; margin-top: 10px; }
     }
 
-    /* Hero */
-    .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; padding: 42px 24px; }
-    .hero .title { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin: 0 0 10px; }
-    .hero p { margin: 8px 0; color: var(--muted); }
-    .avatar { justify-self: center; }
-    /* .avatar img { width: 220px; height: 220px; object-fit: cover; border-radius: 22px; box-shadow: var(--shadow); border: 1px solid var(--border); } */
-    .avatar img {
-      width: 220px;
-      height: 220px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
+    /* Hero: give text most of the space, keep photo column tight */
+    .hero{
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px; /* left flex, right fixed */
+      gap: 28px;
+      align-items: start; /* prevents the photo from vertically centering */
+      padding: 42px 24px;
+    }
+
+    .avatar{
+      justify-self: end;
+      align-self: start;
+    }
+
+    /* keep your existing mobile behavior */
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; text-align: center; }
+      .avatar{ order: -1; justify-self: center; }
     }
 
     .links { display:flex; flex-wrap: wrap; gap:12px; margin-top: 14px; }
