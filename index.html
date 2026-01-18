@@ -20,27 +20,29 @@
   -->
 
   <style>
-    :root {
-      /* Premium calm palette (light) */
-      --bg: #f7f8fc;
-      --panel: #ffffff;
-      --text: #0b1220;
-      --muted: #4b5563;
-      --border: #e6e8ef;
-      --shadow: 0 10px 30px rgba(2, 6, 23, .08);
+    :root{
+    /* Base: keep it white */
+    --bg: #ffffff;
+    --panel: #ffffff;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --border: #e5e7eb;
+    --shadow: 0 10px 30px rgba(2,6,23,.06);
 
-      /* Accent */
-      --link: #1d4ed8;      /* indigo */
-      --link-soft: #3b82f6; /* lighter indigo */
-      --accent: #0f766e;    /* teal */
+    /* Plum theme (like the screenshot) */
+    --brand: #6b3a55;        /* headers + accents */
+    --brand-2: #8a4b6b;      /* hover */
+    --brand-soft: #f3e9ef;   /* light tint background */
+    --brand-line: #e7d2de;   /* borders/lines */
 
-      --card: #ffffff;
-
-      /* Header fallback background (works everywhere) */
-      --header-bg: rgba(247, 248, 252, 0.86);
+    /* Map existing vars */
+    --link: var(--brand);
+    --link-soft: var(--brand-2);
+    --accent: var(--brand);
     }
 
-    @media (prefers-color-scheme: dark) {
+    /* @media (prefers-color-scheme: dark) {
       :root {
         --bg: #0b1020;
         --panel: #0f172a;
@@ -57,7 +59,7 @@
 
         --header-bg: rgba(11, 16, 32, 0.70);
       }
-    }
+    } */
 
     * { box-sizing: border-box; }
     html, body { height: 100%; }
@@ -219,6 +221,61 @@
     .edu-meta, .edu-sub, .edu-date, .edu-gpa { color: var(--muted); font-size: 14px; }
     .edu-right { text-align: right; white-space: nowrap; }
     @media (max-width: 720px) { .edu-right { text-align: left; } }
+
+
+    /* --- Plum accents override (paste at end) --- */
+
+    /* Keep the page white (remove the fancy gradients) */
+    body { background: var(--bg); }
+
+    /* Header stays white but with plum line */
+    header{
+    background: rgba(255,255,255,.9);
+    border-bottom: 1px solid var(--brand-line);
+    }
+
+    /* Titles / headings */
+    .hero .title, h2 { color: var(--brand); }
+
+    /* Nav hover + brand text */
+    .brand span { color: var(--brand); }
+    .nav a:hover { color: var(--brand-2); }
+
+    /* Chips */
+    .chip{
+    background: var(--brand-soft);
+    border-color: var(--brand-line);
+    }
+    .chip:hover{
+    border-color: var(--brand);
+    color: var(--brand);
+    }
+
+    /* News */
+    .news li{ border-left-color: var(--brand-line); }
+    .news time{ color: var(--brand); }
+
+    /* Buttons */
+    .btn{
+    border-color: var(--brand-line);
+    background: var(--brand-soft);
+    }
+    .btn:hover{
+    border-color: var(--brand);
+    color: var(--brand);
+    }
+
+    /* Publication links */
+    .pub{ border-color: var(--brand-line); }
+    .pub h3 a{ color: var(--brand); }
+    .pub h3 a:hover{ color: var(--brand-2); }
+
+    /* Experience links */
+    .exp-meta a{
+    color: var(--brand);
+    text-decoration-color: var(--brand-line);
+    }
+    .exp-meta a:hover{ color: var(--brand-2); }
   </style>
 </head>
 
