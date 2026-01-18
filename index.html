@@ -28,6 +28,7 @@
       --card: #ffffff;
       --border: #e5e7eb;
       --shadow: 0 10px 30px rgba(2,6,23,.06);
+      --link-soft: #3b82f6; /* lighter blue */
     }
     @media (prefers-color-scheme: light) {
       :root {
@@ -40,6 +41,7 @@
         --card: #ffffff;
         --border: #e5e7eb;
         --shadow: 0 10px 30px rgba(2,6,23,.06);
+        --link-soft: #3b82f6; /* lighter blue */
       }
     }
 
@@ -131,6 +133,89 @@
 
     footer { text-align: center; color: var(--muted); padding: 28px 0 40px; }
     footer a { color: var(--link); }
+
+    /* Experience */
+    .exp-list { display: grid; gap: 12px; }
+
+    .exp {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .exp-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .exp-title { font-weight: 700; font-size: 16px; margin-bottom: 2px; }
+    .exp-meta { color: var(--muted); font-size: 14px; }
+    .exp-meta a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--border); }
+    .exp-meta a:hover { color: var(--link); border-bottom-color: var(--link); }
+
+    .exp-note { margin-top: 6px; color: var(--muted); font-size: 14px; }
+
+    .exp-date {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+      padding-left: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .exp-row { flex-direction: column; }
+      .exp-date { padding-left: 0; }
+    }
+
+    .exp-meta a {
+      color: var(--link-soft);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+
+    .exp-meta a:hover {
+      color: var(--link);
+      text-decoration-thickness: 2px;
+    }
+
+    /* Education */
+    .edu-list { display: grid; gap: 12px; }
+
+    .edu {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .edu-title { font-weight: 800; font-size: 16px; margin-bottom: 2px; }
+    .edu-meta { color: var(--muted); font-size: 14px; }
+
+    .edu-sub {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .edu-right { text-align: right; white-space: nowrap; }
+    .edu-date { color: var(--muted); font-size: 14px; }
+    .edu-gpa { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+    @media (max-width: 720px) {
+      .edu-row { flex-direction: column; }
+      .edu-right { text-align: left; }
+    }
   </style>
 </head>
 <body>
@@ -142,6 +227,8 @@
           <li><a href="#about">About</a></li>
           <li><a href="#news">Highlights</a></li>
           <li><a href="#pubs">Publications</a></li>
+          <li><a href="#experience">Experiences</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <details>
@@ -150,6 +237,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#news">Highlights</a></li>
             <li><a href="#pubs">Publications</a></li>
+            <li><a href="#experience">Experiences</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </details>
@@ -166,15 +255,17 @@
           I am a PhD student at <a href="https://mila.quebec/">Mila</a>/<a href="https://www.etsmtl.ca/">ÉTS</a>, advised by
           Prof. <a href="https://www.etsmtl.ca/etudier-a-lets/corps-enseignant/cdesrosiers">Christian Desrosiers</a> and
           Prof. <a href="https://mila.quebec/en/directory/herve-lombaert">Hervé Lombaert</a>.
-          My research is at the intersection of computer vision, deep learning, and efficient neural networks, with a focus
-          on robustness under distribution shifts and geometric transformations. I am also a visiting researcher at
-          <a href="https://www.zebra.com/us/en.html">Zebra</a> working on GenAI applications.
+          My research sits at the intersection of computer vision, deep learning, and efficient neural networks, with a focus on
+          robustness under distribution shifts and geometric transformations. I am also a machine learning research intern at
+          <a href="https://rbcborealis.com/">Borealis AI</a>, working on accelerating LLM inference.
         </p>
         <p>
-          Previously, I was a research assistant at <a href="https://www.chusj.org/">CHU Sainte-Justine</a> in Montreal with
-          Dr. <a href="https://www.chusj.org/fr/Biographie?id=0d8a0dee-7611-4606-8b9d-17cbe8dd7af6">Philippe Jouvet</a>. I obtained my
-          M.Sc. and B.Sc. in Computer Science from <a href="https://aut.ac.ir/en">Amirkabir University of Technology (AUT)</a>,
-          advised by Dr. <a href="https://aut.ac.ir/cv/2220/M.HASSAN%20SHIRALI-SHAHREZA">M. Hassan Shirali‑Shahreza</a> and
+          Previously, I was a machine learning research intern at <a href="https://www.etsmtl.ca/en/research/chairs-laboratories-institutes-centres/research-chairs/zebra">Zebra</a>, where I worked on
+          GenAI applications. I also worked as a research assistant at <a href="https://www.chusj.org/">CHU Sainte-Justine</a> in Montreal under the supervision of
+          Dr. <a href="https://www.chusj.org/fr/Biographie?id=0d8a0dee-7611-4606-8b9d-17cbe8dd7af6">Philippe Jouvet</a>.
+          I received my M.Sc. and B.Sc. in Computer Science from
+          <a href="https://aut.ac.ir/en">Amirkabir University of Technology (AUT)</a>, advised by
+          Dr. <a href="https://aut.ac.ir/cv/2220/M.HASSAN%20SHIRALI-SHAHREZA">M. Hassan Shirali-Shahreza</a> and
           Dr. <a href="https://aut.ac.ir/cv/2046/Mohammad%20Akbari">Mohammad Akbari</a>.
         </p>
         <div class="links">
@@ -193,6 +284,7 @@
     <section id="news" class="panel" aria-labelledby="news-title">
       <h2 id="news-title">Highlights & News</h2>
       <ul class="news" id="oScroll">
+        <li><time>01/2026</time> Joined <a href="https://rbcborealis.com/">Borealis AI</a> as a Machine Learning Research Intern.</li>
         <li><time>09/2025</time> Two papers accepted at NeurIPS 2025: <a href="https://arxiv.org/pdf/2509.22813">TRUST</a> and <a href="https://arxiv.org/pdf/2505.21844">OVSS TTA</a>.</li>
         <li><time>08/2025</time> Served as a reviewer for NeurIPS 2025.</li>
         <li><time>07/2025</time> <a href="https://arxiv.org/pdf/2507.02743">Prompt Learning With Bounding Box</a> accepted at IEEE T-BME 2025.</li>
@@ -202,19 +294,20 @@
         <li><time>02/2025</time> Reviewer for IEEE TMI-2024.</li>
         <li><time>01/2025</time> Reviewer for CVPR 2025.</li>
         <li><time>01/2025</time> <a href="https://arxiv.org/pdf/2411.01116">TTA in Point Clouds with Weight Averaging</a> accepted at WACV 2025 (Oral).</li>
+        <li><time>09/2024</time> Joined <a href="https://www.etsmtl.ca/en/research/chairs-laboratories-institutes-centres/research-chairs/zebra">Zebra</a> as a Machine Learning Research Intern.</li>
         <li><time>09/2024</time> <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/55d16334943f8728073e17139e5baa3d-Paper-Conference.pdf">WATT</a> accepted at NeurIPS 2024.</li>
         <li><time>10/2024</time> Joined Prof. Desrosiers and Prof. Lombaert's lab as a PhD student.</li>
         <li><time>02/2024</time> Abstract on <a href="https://journals.lww.com/pccmjournal/citation/2024/11001/pp259_topic_.245.aspx">Psychomotor Agitation Detection</a> accepted at WFPICCS.</li>
         <li><time>01/2024</time> Awarded the <a href="https://www.upperbound.ai/">Upper Bound Talent Bursary 2024</a>.</li>
         <li><time>12/2023</time> Awarded the <a href="https://mila.quebec/en/prof-cho-scholarship/">Professor Cho Diversity Scholarship</a>.</li>
         <li><time>09/2023</time> TA for <a href="https://sites.google.com/mila.quebec/ift6135-a2023/course-description">Representation Learning</a> at UdeM with <a href="https://www.iro.umontreal.ca/~agrawal/">A. Agrawal</a>.</li>
-        <li><time>06/2023</time> Program reporter for CIFAR DLRL summer school.</li>
+        <!-- <li><time>06/2023</time> Program reporter for CIFAR DLRL summer school.</li>
         <li><time>10/2023</time> <a href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_32">RelationalUNet</a> accepted at MLMI 2023.</li>
         <li><time>09/2022</time> Joined CHU Sainte‑Justine as research assistant.</li>
         <li><time>08/2022</time> Graduated from AUT (M.Sc., CS) with GPA 4/4.</li>
         <li><time>06/2021</time> Joined Holoo as Machine Learning Specialist.</li>
         <li><time>09/2020</time> Started master’s at AUT.</li>
-        <li><time>08/2020</time> Graduated from AUT (B.Sc., CS).</li>
+        <li><time>08/2020</time> Graduated from AUT (B.Sc., CS).</li> -->
       </ul>
     </section>
 
@@ -360,6 +453,123 @@
             <div class="actions">
               <a class="btn" href="https://link.springer.com/chapter/10.1007/978-3-031-45673-2_32">paper</a>
               <a class="btn" href="https://github.com/ivaxi0s/runet">code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="panel" aria-labelledby="exp-title" style="margin-top:16px;">
+      <h2 id="exp-title">Experiences</h2>
+
+      <div class="exp-list">
+        <article class="exp">
+          <div class="exp-row">
+            <div>
+              <div class="exp-title">Machine Learning Research Intern</div>
+              <div class="exp-meta"><a href="https://borealisai.com/">Borealis AI</a> · Montréal, Canada</div>
+            </div>
+            <div class="exp-date">January 2026 - April 2026</div>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-row">
+            <div>
+              <div class="exp-title">Machine Learning Research Intern</div>
+              <div class="exp-meta"><a href="https://www.etsmtl.ca/en/research/chairs-laboratories-institutes-centres/research-chairs/zebra">Zebra technologies</a> · Montréal, Canada</div>
+            </div>
+            <div class="exp-date">September 2024 - December 2025</div>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-row">
+            <div>
+              <div class="exp-title">Program Reporter</div>
+              <div class="exp-meta"><a href="https://dlrl.ca/">CIFAR DLRL Summer School</a> · Montréal, Canada</div>
+            </div>
+            <div class="exp-date">July 2023 - July 2023</div>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-row">
+            <div>
+              <div class="exp-title">Machine Learning Researcher</div>
+              <div class="exp-meta"><a href="https://mila.quebec/en">Mila - Quebec AI Institute</a> · Montréal, Canada</div>
+            </div>
+            <div class="exp-date">September 2022 - Present</div>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-row">
+            <div>
+              <div class="exp-title">Machine Learning Researcher</div>
+              <div class="exp-meta"><a href="https://www.chusj.org/">CHU Sainte-Justine</a> · Montréal, Canada</div>
+            </div>
+            <div class="exp-date">September 2022 - February 2024</div>
+          </div>
+        </article>
+
+        <article class="exp">
+          <div class="exp-row">
+            <div>
+              <div class="exp-title">Machine Learning Expert</div>
+              <div class="exp-meta"><a href="https://holoo.co.ir/en/">Holoo Software Engineering Company</a> · Tehran, Iran</div>
+            </div>
+            <div class="exp-date">May 2021 - July 2021</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="panel" aria-labelledby="edu-title" style="margin-top:16px;">
+      <h2 id="edu-title">Education</h2>
+
+      <div class="edu-list">
+        <article class="edu">
+          <div class="edu-row">
+            <div>
+              <div class="edu-title">Ph.D. in Engineering</div>
+              <div class="edu-meta">École de technologie supérieure (ÉTS) · Montreal, Canada</div>
+              <div class="edu-sub">Supervisors: Prof. Christian Desrosiers, Prof. Herve Lombaert</div>
+              <div class="edu-sub">Thesis Title: <em>Deep Learning Approaches for Efficient Neural Network Design in Computer Vision</em></div>
+            </div>
+            <div class="edu-right">
+              <div class="edu-date">2022 – 2026</div>
+              <div class="edu-gpa">GPA: 4.3 / 4.3</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="edu">
+          <div class="edu-row">
+            <div>
+              <div class="edu-title">M.Sc. in Computer Science</div>
+              <div class="edu-meta">Amirkabir University of Technology (AUT) · Tehran, Iran</div>
+              <div class="edu-sub">Supervisors: Dr. M.Hassan Shirali-Shahreza and Dr. Mohammad Akbari</div>
+              <div class="edu-sub">Thesis Title: <em>3D Human Pose Estimation Using Neural Networks</em></div>
+            </div>
+            <div class="edu-right">
+              <div class="edu-date">2020 – 2022</div>
+              <div class="edu-gpa">GPA: 4.00 / 4.00</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="edu">
+          <div class="edu-row">
+            <div>
+              <div class="edu-title">B.Sc. in Computer Science</div>
+              <div class="edu-meta">Amirkabir University of Technology (AUT) · Tehran, Iran</div>
+            </div>
+            <div class="edu-right">
+              <div class="edu-date">2016 – 2020</div>
+              <div class="edu-gpa">GPA: 3.84 / 4.00</div>
             </div>
           </div>
         </article>
