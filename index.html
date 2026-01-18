@@ -101,12 +101,6 @@
       align-self: start;
     }
 
-    /* keep your existing mobile behavior */
-    @media (max-width: 900px){
-      .hero{ grid-template-columns: 1fr; text-align: center; }
-      .avatar{ order: -1; justify-self: center; }
-    }
-
     .links { display:flex; flex-wrap: wrap; gap:12px; margin-top: 14px; }
     .chip { border: 1px solid var(--border); padding: 8px 12px; border-radius: 999px; text-decoration: none; color: var(--text); font-size: 14px; }
     .chip:hover { border-color: var(--link); color: var(--link); }
